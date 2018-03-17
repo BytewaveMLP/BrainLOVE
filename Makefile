@@ -3,8 +3,9 @@ MOONC = moonc
 
 .PHONY: clean build run package bin
 
-package: clean build
-	mkdir -pv out
+package: clean
+	${MAKE} build
+	mkdir -pv out/
 	cd build; zip -9 -r ../out/BrainLOVE.love .
 
 linux: package
@@ -12,11 +13,12 @@ linux: package
 	chmod +x out/BrainLOVE
 
 build:
-	${MOONC} -t build .
+	${MOONC} -t build/ .
 
 clean:
-	rm -rfv build
-	rm -rfv out
+	rm -rfv build/
+	rm -rfv out/
 
-run: clean build
-	${LOVE} build
+run: clean
+	${MAKE} build
+	${LOVE} build/
