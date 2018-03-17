@@ -14,6 +14,7 @@ linux: package
 
 build:
 	${MOONC} -t build/ .
+	cp -rv assets/ build/
 
 clean:
 	rm -rfv build/
