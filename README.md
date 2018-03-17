@@ -21,7 +21,7 @@
 
 #### Prerequisites
 
-- LOVE2D 0.10.2
+- LÖVE2D 0.10.2
 - GNU `make`
 - `moonc` (`luarocks install moonscript`)
 
