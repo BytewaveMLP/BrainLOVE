@@ -16,6 +16,14 @@ class Brainfuck
 	-- @returns A table of length 256 representing the cells on the tape
 	getTape: => @tape
 
+	--- Gets the current cell pointer on the tape
+	-- @returns The current cell number
+	getTapePointer: => @pointer
+
+	--- Gets the stdin pointer
+	-- @returns The current stdin pointer
+	getStdinPointer: => @stdinPointer
+
 	--- Validates the Brainfuck object to ensure the code is in a working state
 	-- Ensures that there are an equal number of [s and ]s.
 	-- @returns Whether or not the number of [s equals the number of ]s.
