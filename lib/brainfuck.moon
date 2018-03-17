@@ -16,9 +16,13 @@ class Brainfuck
 	-- @returns A table of length 256 representing the cells on the tape
 	getTape: => @tape
 
-	--- Gets the current cell pointer on the tape
+	--- Gets the current tape cell number
 	-- @returns The current cell number
-	getTapePointer: => @pointer
+	getCurrentCell: => @currentCell
+
+	--- Gets the current code pointer
+	-- @returns The current instructino number
+	getCodePointer: => @pointer
 
 	--- Gets the stdin pointer
 	-- @returns The current stdin pointer
