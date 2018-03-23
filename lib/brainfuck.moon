@@ -64,7 +64,12 @@ class Brainfuck
 				@currentCell = @currentCell - 1
 				if @currentCell < 1 then @currentCell = 256
 			when "["
-				table.insert @loopStarts, @pointer
+				-- Skip over loop if current cell is 0
+				-- TODO: actually test this
+				if @tape[@currentCell] == 0
+					@pointer = @pointer + @code\sub @pointer)\find "]"
+				else
+					table.insert @loopStarts, @pointer
 			when "]"
 				loopStart = table.remove @loopStarts
 
