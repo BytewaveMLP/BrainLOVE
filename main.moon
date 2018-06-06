@@ -19,22 +19,22 @@ love.load = () ->
 		(love.graphics.newText hackFont, "RUN")
 	)
 
-	runButton\setColor 255, 150, 150
-	runButton\setTextColor 255, 255, 255
+	runButton\setColor 1, 0.588, 0.588
+	runButton\setTextColor 1, 1, 1
 
 	runButton\onClick(((mousedown) =>
 		if mousedown
 			if running
-				runButton\setColor 175, 100, 100
+				runButton\setColor 0.686, 0.392, 0.392
 			else
-				runButton\setColor 100, 175, 100
+				runButton\setColor 0.392, 0.686, 0.392
 		else
 			if running
-				runButton\setColor 150, 255, 150
-				resetButton\setColor 125, 125, 125
+				runButton\setColor 0.588, 1, 0.588
+				resetButton\setColor 0.49, 0.49, 0.49
 			else
-				runButton\setColor 255, 150, 150
-				resetButton\setColor 255, 150, 150
+				runButton\setColor 1, 0.588, 0.588
+				resetButton\setColor 1, 0.588, 0.588
 
 			running = not running
 	))
@@ -42,14 +42,14 @@ love.load = () ->
 	runButton\onHover(((entered) =>
 		if entered
 			if running
-				runButton\setColor 125, 200, 125
+				runButton\setColor 0.49, 0.784, 0.49
 			else
-				runButton\setColor 200, 125, 125
+				runButton\setColor 0.784, 0.49, 0.49
 		else
 			if running
-				runButton\setColor 150, 255, 150
+				runButton\setColor 0.588, 1, 0.588
 			else
-				runButton\setColor 255, 150, 150
+				runButton\setColor 1, 0.588, 0.588
 	))
 
 	export resetButton = Button(
@@ -60,8 +60,8 @@ love.load = () ->
 		(love.graphics.newText hackFont, "RESET")
 	)
 
-	resetButton\setColor 125, 125, 125
-	resetButton\setTextColor 255, 255, 255
+	resetButton\setColor 0.49, 0.49, 0.49
+	resetButton\setTextColor 1, 1, 1
 
 	resetButton\onClick(((mousedown) =>
 		if mousedown then return
@@ -71,8 +71,8 @@ love.load = () ->
 		running = false
 		outStr = ""
 		outText\set outStr
-		runButton\setColor 255, 150, 150
-		resetButton\setColor 125, 125, 125
+		runButton\setColor 1, 0.588, 0.588
+		resetButton\setColor 0.49, 0.49, 0.49
 	))
 
 love.update = (dt) ->
