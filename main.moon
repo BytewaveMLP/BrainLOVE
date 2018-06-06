@@ -31,7 +31,7 @@ love.load = () ->
 		else
 			if running
 				runButton\setColor 0.588, 1, 0.588
-				resetButton\setColor 0.49, 0.49, 0.49
+				resetButton\setColor 0.490, 0.490, 0.490
 			else
 				runButton\setColor 1, 0.588, 0.588
 				resetButton\setColor 1, 0.588, 0.588
@@ -42,9 +42,9 @@ love.load = () ->
 	runButton\onHover(((entered) =>
 		if entered
 			if running
-				runButton\setColor 0.49, 0.784, 0.49
+				runButton\setColor 0.490, 0.784, 0.490
 			else
-				runButton\setColor 0.784, 0.49, 0.49
+				runButton\setColor 0.784, 0.490, 0.490
 		else
 			if running
 				runButton\setColor 0.588, 1, 0.588
@@ -60,7 +60,7 @@ love.load = () ->
 		(love.graphics.newText hackFont, "RESET")
 	)
 
-	resetButton\setColor 0.49, 0.49, 0.49
+	resetButton\setColor 0.490, 0.490, 0.490
 	resetButton\setTextColor 1, 1, 1
 
 	resetButton\onClick(((mousedown) =>
@@ -72,7 +72,7 @@ love.load = () ->
 		outStr = ""
 		outText\set outStr
 		runButton\setColor 1, 0.588, 0.588
-		resetButton\setColor 0.49, 0.49, 0.49
+		resetButton\setColor 0.490, 0.490, 0.490
 	))
 
 love.update = (dt) ->
