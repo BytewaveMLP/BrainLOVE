@@ -21,7 +21,7 @@
 
 #### Prerequisites
 
-- LÖVE2D 0.10.2
+- LÖVE2D 11.1
 - GNU `make`
 - `moonc` (`luarocks install moonscript`)
 
